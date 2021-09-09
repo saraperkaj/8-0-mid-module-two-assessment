@@ -175,7 +175,13 @@ let getAllMoviesReleasedAtOrBeforeYear = (movies, year) => {
     ];
  */
 function getRottenTomatoesScoreByMovie(movies) {
-  movies.map((movie) => movie.find((m) => m));
+  if (movies.length === 0) {
+    throw "lol no movies maaaannn.";
+  }
+  // const key = movies.find((movie) => movie.title);
+  // const val = movies.find((movie) => movie.ratings[1].value);
+  // // movies.map((movie) => new Object{});
+  // return movies.map()
 }
 
 // Do not change anything below this line.
