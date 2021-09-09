@@ -180,7 +180,7 @@ describe("filterByGenre()", () => {
   });
 });
 
-describe.skip("getAllMoviesReleasedAtOrBeforeYear()", () => {
+describe("getAllMoviesReleasedAtOrBeforeYear()", () => {
   test("should use the `.filter()` method", () => {
     const text = getAllMoviesReleasedAtOrBeforeYear.toString();
     expect(text).toMatch(/\.filter\(.*\)/s);

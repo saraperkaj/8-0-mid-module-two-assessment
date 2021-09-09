@@ -146,7 +146,7 @@ let getAllMoviesReleasedAtOrBeforeYear = (movies, year) => {
   if (movies.length === 0) {
     throw "error";
   }
-  movies.filter((movie) => movie.year === year);
+  return movies.filter((movie) => Number(movie.released.slice(-4)) <= year);
 };
 
 /**
