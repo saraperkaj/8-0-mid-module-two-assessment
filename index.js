@@ -55,8 +55,15 @@ let getAllMovieTitles = (movies) => {
  *  checkIfAnyMovieHasRating(movies, "R");
  *  //> false
  */
-let checkIfAnyMovieHasRating = (movies, rating) =>
-  movies.some((movie) => rating === movie.rated);
+let checkIfAnyMovieHasRating = (movies, rating = "G") => {
+  if (movies.length === 0) {
+    throw "no movies.";
+  }
+  if (!rating) {
+    throw "G";
+  }
+  return movies.some((movie) => rating === movie.rated);
+};
 /**
  * findById()
  * -----------------------------
