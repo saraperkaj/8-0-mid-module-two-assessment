@@ -80,11 +80,12 @@ let checkIfAnyMovieHasRating = (movies, rating = "G") => {
       // Toy Story 4
     };
  */
-let findById = (movies, id = "null") => {
+let findById = (movies, id) => {
   if (movies.length === 0) {
     throw "no movies.";
   }
-  return movies.find((movie) => movie.imdbID === id);
+  const result = movies.find((movie) => movie.imdbID === id);
+  return result || null;
 };
 
 /**
