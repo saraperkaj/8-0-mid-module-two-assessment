@@ -31,10 +31,10 @@ const exampleMovies = require("./movies");
     ];
  */
 let getAllMovieTitles = (movies) => {
-  movies.map((movie) => `${movie.title}`);
   if (!movies.length) {
     throw "no movies";
   }
+  return movies.map((movie) => `${movie.title}`);
 };
 
 /**
