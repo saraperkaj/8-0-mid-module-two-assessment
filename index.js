@@ -59,9 +59,6 @@ let checkIfAnyMovieHasRating = (movies, rating = "G") => {
   if (movies.length === 0) {
     throw "no movies.";
   }
-  if (!rating) {
-    throw "G";
-  }
   return movies.some((movie) => rating === movie.rated);
 };
 /**
